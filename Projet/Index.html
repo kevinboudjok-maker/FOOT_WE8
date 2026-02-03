@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>À propos de Kevin</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Kevin ⚽</h1>
+
+
+  <section class="content">
+    <h2>À propos de moi</h2>
+    <p>Bonjour ! Je m’appelle <strong>Kevin </strong>. Je joue au soccer pour <strong>Burnaby FC</strong> dans la ligue <strong>BCSPL</strong>. Le soccer est ma passion, et je m’entraîne chaque semaine pour devenir un meilleur joueur.</p>
+
+    <p>J’adore la compétition et le travail d’équipe. Mon objectif est de continuer à progresser, à apprendre et à jouer à un haut niveau.</p>
+
+    <img src="burnabyfc-logo@2x.png" alt="Logo Burnaby FC" width="200">
+  </section>
+
+  <footer>
+    <p>© 2025 Kevin | Burnaby FC</p>
+  </footer>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Login</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: white;
+    }
+    .box {
+      background: #1e293b;
+      padding: 20px;
+      border-radius: 10px;
+      width: 300px;
+      text-align: center;
+    }
+    input {
+      width: 100%;
+      padding: 8px;
+      margin: 8px 0;
+      border-radius: 5px;
+      border: none;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background: #38bdf8;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    button:hover {
+      background: #0ea5e9;
+    }
+    .msg {
+      margin-top: 10px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    if (localStorage.getItem("loggedIn") !== "true") {
+        // If not logged in, kick them back to the login page
+        window.location.href = "login.html";
+
+  </script>
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="recompenses.html">Récompenses</a>
+    <a href="entrainement.html">Entraînement</a>
+    <a href="boutique.html">Boutique</a>
+</nav>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sports Login</title>
+  <style>
+    body { font-family: Arial; background: #0f172a; display: flex; justify-content: center; align-items: center; height: 100vh; color: white; }
+    .box { background: #1e293b; padding: 30px; border-radius: 10px; width: 300px; text-align: center; border: 2px solid #38bdf8; }
+    input { width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: none; box-sizing: border-box; }
+    button { width: 100%; padding: 10px; background: #38bdf8; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; }
+    .msg { margin-top: 10px; color: #ff4d4d; font-size: 14px; }
+  </style>
+</head>
+<body>
+
+<div class="box">
+  <h2>⚽ Sports Academy</h2>
+  <input type="text" id="email" placeholder="Email (user@example.com)">
+  <input type="password" id="password" placeholder="Password (password123)">
+  <button onclick="login()">Login</button>
+  <p class="msg" id="msg"></p>
+</div>
+
+<script>
+  function login() {
+    const userEmail = document.getElementById("email").value;
+    const userPass = document.getElementById("password").value;
+    const msg = document.getElementById("msg");
+
+    // Set your credentials here
+    if (userEmail === "user@example.com" && userPass === "password123") {
+      localStorage.setItem("loggedIn", "true"); // Key must be "loggedIn"
+      window.location.href = "index.html"; // Go to index
+    } else {
+      msg.textContent = "Invalid credentials ❌";
+    }
+  }
+
+  // If already logged in, skip this page
+  if (localStorage.getItem("loggedIn") === "true") {
+    window.location.href = "index.html";
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+body {
+font-family: Arial, sans-serif;
+background: #e8edf3;
+margin: 0;
+padding: 0;
+}
+header {
+background: #1e3a8a;
+color: white;
+padding: 20px;
+text-align: center;
+}
+nav a {
+margin: 0 10px;
+color: white;
+text-decoration: none;
+font-weight: bold;
+}
+nav a:hover {
+text-decoration: underline;
+}
+main, .content {
+padding: 20px;
+}
+footer {
+background: #1e3a8a;
+color: white;
+text-align: center;
+padding: 10px;
+margin-top: 20px;
+}
+.maillot {
+width: 250px;
+display: block;
+margin: 20px auto;
+border-radius: 10px;
+}
